@@ -1,9 +1,9 @@
-<h1>AgenceX Landing page</h1>
+<h1>Push Enhance Landing page</h1>
 
 A simple landing page for a digital agency
 
-![AgenceX light Theme](./screens/demoLight.webp)
-![AgenceX Dark Theme](./screens/demoDark.webp)
+![Push Enhance light Theme](./screens/demoLight.webp)
+![Push Enhance Dark Theme](./screens/demoDark.webp)
 
 
 ## Tools
