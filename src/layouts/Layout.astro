@@ -95,6 +95,14 @@ const { title } = Astro.props;
         
       });
 
+      navbar.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleMenu.setAttribute("data-open-nav", "false");
+        overlayNav.setAttribute("data-is-visible", "false");
+        document.body.classList.remove("!overflow-y-hidden");
+		  	navbar.style.height = "0px"
+      });
+
       overlayNav.addEventListener("click", (e) => {
         e.preventDefault();
         toggleMenu.setAttribute("data-open-nav", "false");
