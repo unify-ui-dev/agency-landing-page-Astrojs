@@ -77,7 +77,7 @@ const { title } = Astro.props;
       "[data-nav-overlay]"
     ) as HTMLDivElement;
     if (toggleMenu) {
-      toggleMenu.addEventListener("click", (e) => {
+      toggleMenu.addEventListener("click", e => {
         e.preventDefault();
         if (toggleMenu.getAttribute("data-open-nav") === "false") {
           toggleMenu.setAttribute("data-open-nav", "true");
@@ -95,16 +95,14 @@ const { title } = Astro.props;
         
       });
 
-      navbar.addEventListener("click", (e) => {
-        e.preventDefault();
+      navbar.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
         overlayNav.setAttribute("data-is-visible", "false");
         document.body.classList.remove("!overflow-y-hidden");
 		  	navbar.style.height = "0px"
       });
 
-      overlayNav.addEventListener("click", (e) => {
-        e.preventDefault();
+      overlayNav.addEventListener("click", () => {
         toggleMenu.setAttribute("data-open-nav", "false");
         	overlayNav.setAttribute("data-is-visible", "false");
         	document.body.classList.remove("!overflow-y-hidden");
