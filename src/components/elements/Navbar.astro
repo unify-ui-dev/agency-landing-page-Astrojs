@@ -81,20 +81,20 @@ const navItems = [
     </Container>
 </header>
 <script>
-    document.querySelector('[data-switch-theme]').addEventListener('click', function() {
+    document.querySelector('[data-switch-theme]')?.addEventListener('click', function() {
   const lightLogo = document.getElementById('light-theme-logo');
   const darkLogo = document.getElementById('dark-theme-logo');
 
   if (document.body.classList.contains('dark')) {
     // If the current theme is dark, switch to light
     document.body.classList.remove('dark');
-    lightLogo.classList.remove('hidden');
-    darkLogo.classList.add('hidden');
+    lightLogo?.classList.remove('hidden');
+    darkLogo?.classList.add('hidden');
   } else {
     // If the current theme is light, switch to dark
     document.body.classList.add('dark');
-    lightLogo.classList.add('hidden');
-    darkLogo.classList.remove('hidden');
+    lightLogo?.classList.add('hidden');
+    darkLogo?.classList.remove('hidden');
   }
 });
 </script>

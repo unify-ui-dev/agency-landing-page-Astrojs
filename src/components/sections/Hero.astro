@@ -1,4 +1,5 @@
 ---
+import BtnLink from "../shared/BtnLink.astro";
 import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
@@ -21,13 +22,13 @@ import ByNumber from "./ByNumber.astro";
              Boutique <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Web Agency</span> in Noosa Hinterland.
             </h1>
             <Paragraph className="mt-8">
-                We are dedicated to helping everyone establish an online presence. Let us guide you through the process and bring your business to the digital world.
+                We are dedicated to helping everyone establish and enhance their online presence. Let us guide you through the process and bring your business to the digital world.
             </Paragraph>
-            <!-- <Paragraph className="mt-8">
-            <a class="text-transparent text-2xl bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600" href="https://tidycal.com/silvandre/15-minute-meeting" target="_blank"><strong class="text-lg">Book a call 📞 </strong></a>
-            </Paragraph> -->
+           
             <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
-                <div class="flex sm:flex-row flex-col gap-5 w-full">
+                <div class="flex justify-between sm:justify-center sm:flex-row flex-col gap-5 w-full">
+                   
+                 
                     <form action="#"  class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
                       border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
                         <span class="min-w-max pr-2 border-r border-box-border">
@@ -47,11 +48,26 @@ import ByNumber from "./ByNumber.astro";
                                 </svg>                                      
                             </span>
                         </Button>
+                     
                         
                     </form>
+<!--                    
+                    <div class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+                    border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
+                    
+                      
+                    <Button variant={"primary"} className={"min-w-max text-white"}>
+                        <span class="hidden sm:flex relative z-[5]"> Book a call  📞 </span>
+                           
+                        </Button>
+                   
+                      
+                  </div> -->
                   
                 </div>
+                
             </div>
+          <BtnLink href="#" text="hello" variant="primary"/>
         </div>
 
         <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
