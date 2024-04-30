@@ -3,34 +3,34 @@ import GroupFooterNav from "../blocks/GroupFooterNav.astro";
 import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
-const footerNav1 = [
-    {
-        itemText:"Marketing",
-        itemLink:"#"
-    },
-    {
-        itemText:"Analylitics",
-        itemLink:"#"
-    },
-    {
-        itemText:"Commerce",
-        itemLink:"#"
-    },
-    {
-        itemText:"Insights",
-        itemLink:"#"
-    }
-]
+// const footerNav1 = [
+//     {
+//         itemText:"Marketing",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Analylitics",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Commerce",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Insights",
+//         itemLink:"#"
+//     }
+// ]
 
 const footerSupport = [
     {
         itemText:"Pricing",
         itemLink:"#"
     },
-    {
-        itemText:"Guides",
-        itemLink:"#"
-    },
+    // {
+    //     itemText:"Guides",
+    //     itemLink:"#"
+    // },
     {
         itemText:"FAQ",
         itemLink:"#"
@@ -50,18 +50,15 @@ const footerCompany = [
         itemText:"Blog",
         itemLink:"#"
     },
-    {
-        itemText:"Jobs",
-        itemLink:"#"
-    },
-    {
-        itemText:"Parteners",
-        itemLink:"#"
-    },
-    {
-        itemText:"Jobs",
-        itemLink:"#"
-    }
+    // {
+    //     itemText:"Jobs",
+    //     itemLink:"#"
+    // },
+    // {
+    //     itemText:"Parteners",
+    //     itemLink:"#"
+    // },
+  
 ]
 const footerLegal = [
     {
@@ -113,7 +110,23 @@ const footerLegal = [
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
             <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
                 <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
+                    <div class="min-w-max inline-flex relative">
+                        <a href="/" class="relative flex items-center gap-3">
+                            <div class="relative w-10 h-10 overflow-hidden flex rounded-xl">
+                                <img src="/images/logo-transparent-dark.png" id="light-theme-logo" alt="noosa hinterland web logo">
+                                <img src="/images/logo-transparent-light.png" id="dark-theme-logo" alt="noossa hinterland web logo">
+                                <!-- <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
+                                <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
+                                <span class="absolute w-4 h-4 -bottom-1 -left-1 bg-primary rounded-md rotate-45"></span>
+                                <span class="absolute w-2 h-2 rounded-full bg-heading-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span> -->
+                            </div>
+                            <div class="inline-flex font-semibold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
+                                Hinterland Web
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <!-- <a href="#" class="relative flex items-center gap-3">
                         <div class="relative w-7 h-7 overflow-auto flex rounded-xl">
                             <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
                             <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
@@ -123,11 +136,11 @@ const footerLegal = [
                         <div class="inline-flex text-lg font-semibold text-heading-1">
                             AgenceX
                         </div>
-                    </a>
-                    <Paragraph className={"mt-8"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, maiores nam doloribus id magni
+                    </a> -->
+                    <Paragraph className={"mt-1"}>
+                        Made with ❤️ in Pomona
                     </Paragraph>
-                </div>
+               
 
                 <!-- social links -->
                 <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
@@ -160,24 +173,29 @@ const footerLegal = [
                     </a>
                 </div>
             </div>
+        </div>
 
             <GroupFooterNav>
-                <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+               
+                <FooterNav title={"Support"} navItems={footerSupport}/>
+                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+            
             </GroupFooterNav>
 
             <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
-                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+               
+                
+                <FooterNav title={"Company"} navItems={footerCompany}/>
             </GroupFooterNav>
 
         </div>
+    
     </Container>
     <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
         <Container>
-            <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
+            <div class="flex justify-between content-center items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> AgenceX. All right reserved
+                    &copy; <span id="year"></span> 2024 Hinterland Web. All right reserved
                 </div>
                 
             </div>
