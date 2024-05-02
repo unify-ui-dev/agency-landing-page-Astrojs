@@ -49,10 +49,34 @@ const copy =
                 <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-green-400 rounded-full blur-3xl opacity-60"></div>
                 
                 <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
-                <img src={"/images/dev-with-c.webp"} alt="banner image" 
+                <img src="/images/how-it-works-md-blue.png"  alt="hinterland web banner image" 
                 width="1240" height="1385"
                 class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
+                <!-- <img src="/images/how-it-works-md-for-light-theme.png" id="light-theme-illustration" alt="hinterland web banner image" 
+                width="1240" height="1385"
+                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
+                <img src="/images/how-it-works-md-for-dark-theme.png" id="dark-theme-illustration" alt="hinterland web banner image" 
+                width="1240" height="1385"
+                class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" /> -->
             </div>
         </div>
     </Container>
 </section>
+<!-- <script>
+    document.querySelector('[data-switch-theme]')?.addEventListener('click', function() {
+        const lightThemeIllustration = document.getElementById('light-theme-illustration');
+        const darkThemeIllustration = document.getElementById('dark-theme-illustration');
+
+        if (document.body.classList.contains('dark')) {
+            // If the current theme is dark, switch to light
+            document.body.classList.remove('dark');
+            lightThemeIllustration?.classList.remove('hidden'); // Show light theme illustration
+            darkThemeIllustration?.classList.add('hidden'); // Hide dark theme illustration
+        } else {
+            // If the current theme is light, switch to dark
+            document.body.classList.add('dark');
+            lightThemeIllustration?.classList.add('hidden'); // Hide light theme illustration
+            darkThemeIllustration?.classList.remove('hidden'); // Show dark theme illustration
+        }
+    });
+</script> -->
