@@ -1,0 +1,45 @@
+---
+
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { projects } from "../../utils/work";
+import Works from "../cards/Works.astro";
+
+
+type ProjectProps = {
+    title: string;
+    description: string;
+    image: string
+    position?: string,
+    url:string;
+};
+
+
+---
+
+<section id="ourwork">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+               Some of Our Work
+            </Title>
+            <Paragraph>
+                A few example of the projects we have worked so far. Click on the cards and you will be redirected to the project page.
+            </Paragraph>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {
+                    projects.map((project: ProjectProps | undefined) => {
+                        if (!project) {
+      return null;
+    }
+                    return (
+                            <Works title={project.title} description={project.description} image={project.image} position={project.position || ""} url={project.url}>
+                            </Works>
+                            );
+                    })
+            }
+        </div>
+    </Container>
+</section>

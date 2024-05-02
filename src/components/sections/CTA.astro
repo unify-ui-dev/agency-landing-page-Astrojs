@@ -2,6 +2,9 @@
 import Button from "../shared/Button.astro";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
+
+const phoneNumber= import.meta.env.PUBLIC_PHONE_NR
+
 ---
 
 <section  id="cta" class="pb-20">
@@ -29,7 +32,7 @@ import Paragraph from "../shared/Paragraph.astro";
               class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
             ></span>
             <span
-              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+              class="absolute w-16 h-16 -bottom-1 -right-1 bg-body rounded-md rotate-45"
             ></span>
             <span
               class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
@@ -41,18 +44,24 @@ import Paragraph from "../shared/Paragraph.astro";
           class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
           font-bold text-heading-1"
         >
-          Quick Start your <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Strategic Digital</span> Marketing Campaing
+          Kickstart your <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Online Presence</span> Now!
         </h1>
-        <Paragraph className={"pt-10"}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-          delectus architecto ullam earum
-        </Paragraph>
+        <!-- <Paragraph className={"pt-10"}>
+          If you are unsure where to start, no worries, we are here to help.<br/><strong class="text-xl"> Just gives a call</strong> !
+        </Paragraph> -->
         <div class="mx-auto max-w-md sm:max-w-xl pt-10">
+          <a href=`tel:${phoneNumber}`>
           <Button variant={"primary"}>
-            <span class="text-white relative z-[5]">Get In Touch</span>
+            <span class="text-white text-2xl relative z-[5]">Give Us a Call</span>
           </Button>
+        </a>
+        
         </div>
       </div>
+      
     </div>
+    
   </Container>
+
+  
 </section>

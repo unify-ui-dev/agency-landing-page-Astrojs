@@ -4,6 +4,10 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
+const mission ="We strive to provide guidance and support to help our clients successfully navigate the digital landscape and elevate their visibility."
+const vision="To be the go-to resource for individuals and businesses looking to establish and improve their online presence. We aim to provide the tools and resources necessary to help our clients achieve their goals and grow their brand presence online."
+const vision2="A world where every individual and business can seamlessly integrate into the digital world, achieving success through a strong online presence."
+
 ---
 
 <section id="about-us">
@@ -14,27 +18,27 @@ import Title from "../shared/Title.astro";
                 <div class="absolute  p-1 -top-4 md:-top-10 right-0 w-20 h-20 bg-gradient-to-br from-primary to-orange-400 rounded-full blur-3xl opacity-60"></div>
                 
                 <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
-                <img src={"/images/dev-with-c-1.webp"} alt="banner image" 
-                width="1240" height="1385"
+                <img src={"/images/open-peeps-sitting-md.png"} alt="banner image" 
+                width="1240" height="1500"
                 class=" w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full" />
             </div>
         </div>
-        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+        <div class="flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col h-full">
             <Title>
                 We help drive your business forward faster
             </Title>
             <Paragraph className="mt-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, saepe aliquid autem alias vero distinctio dignissimos consequatur? Excepturi quibusdam, quam ipsum hic, laudantium ducimus suscipit, culpa facere consequuntur repellat delectus.
+                Owning your digital presence has never been so important. A personal website helps you build your brand, show off you work and even sell your wares. <a href="https://tidycal.com/silvandre/15-minute-meeting" target="_blank"><strong>We can help you get started</strong></a>!
             </Paragraph>
-            <div class="pt-8 grid grid-cols-2 items-center gap-4 max-w-3xl md:max-w-[none]">
-                <Info description="Lorem ipsum dolor sit amet consectetur" title="Mission">
-                    <span slot="icon">
+            <div class="pt-8 grid lg:grid-cols-2 sm:grid-cols-1 items-center lg:text-left sm:text-center gap-4 max-w-3xl md:max-w-[none]">
+                <Info description={mission} title="Mission">
+                    <span slot="icon" class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                         </svg>                              
                     </span>
                 </Info>
-                <Info description="Lorem ipsum dolor sit amet consectetur" title="Vision">
+                <Info description={vision2} title="Vision">
                     <span slot="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />

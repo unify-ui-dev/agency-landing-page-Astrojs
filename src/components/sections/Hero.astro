@@ -1,15 +1,16 @@
 ---
-import Button from "../shared/Button.astro";
+import BtnLink from "../shared/BtnLink.astro";
+
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
-import ByNumber from "./ByNumber.astro";
+
 
 ---
 
 <section class="relative pt-32 lg:pt-36">
     <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
         <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
-            <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
+            <!-- <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span> -->
             <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
         </div>
         <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
@@ -18,15 +19,17 @@ import ByNumber from "./ByNumber.astro";
             
             <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
              font-bold text-heading-1">
-             Social Media  <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Marketing</span> is the Best Ever.
+             Boutique <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Web Agency</span> in Noosa Hinterland.
             </h1>
             <Paragraph className="mt-8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores repellat perspiciatis aspernatur quis voluptatum porro incidunt, 
-                libero sequi quos eos velit
+                We are dedicated to helping everyone establish and enhance their online presence. Let us guide you through the process and bring your business to the digital world.
             </Paragraph>
+           
             <div class="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
-                <div class="flex sm:flex-row flex-col gap-5 w-full">
-                    <form action="#"  class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+                <div class="flex justify-between sm:justify-center sm:flex-row flex-col gap-5 w-full">
+                   
+                 
+                    <!-- <form action="#"  class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
                       border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
                         <span class="min-w-max pr-2 border-r border-box-border">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -34,6 +37,7 @@ import ByNumber from "./ByNumber.astro";
                             </svg>                                                                  
                         </span>
                         <input type="email" name="" id="" placeholder="johndoe@gmail.com" class="w-full py-3 outline-none bg-transparent">
+                        
                         <Button variant={"primary"} className={"min-w-max text-white"}>
                             <span class="hidden sm:flex relative z-[5]">
                                 Get Started
@@ -44,15 +48,32 @@ import ByNumber from "./ByNumber.astro";
                                 </svg>                                      
                             </span>
                         </Button>
-                    </form>
+                     
+                        
+                    </form> -->
+<!--                    
+                    <div class="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3 shadow-lg shadow-box-shadow
+                    border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body  focus-within:border-primary">
+                    
+                      
+                    <Button variant={"primary"} className={"min-w-max text-white"}>
+                        <span class="hidden sm:flex relative z-[5]"> Book a call  📞 </span>
+                           
+                        </Button>
+                   
+                      
+                  </div> -->
+                  
                 </div>
+                
             </div>
+            <BtnLink href="https://tidycal.com/silvandre/15-minute-meeting" text="Book a Free Discovery Call" variant="primary" className="lg:text-2xl sm:text-xl shadow-lg shadow-box-shadow"/>
         </div>
 
         <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-            <img src="/images/image1.webp" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
+            <img src="/images/cooroora-pic.webp" alt="Hero image" width="2350" height="2359" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
         </div>
     </Container>
 
-    <ByNumber/>
+   
 </section>

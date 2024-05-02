@@ -1,0 +1,29 @@
+---
+import Paragraph from '../shared/Paragraph.astro';
+
+
+export interface Props{
+    title?:string,
+    description?:string,
+    image: string,
+    position: string,
+    url:string
+}
+
+const {title, description, image, url, position} = Astro.props
+---
+<a href={url} target="_blank" rel="noreferrer">
+    <div style={`background-image: url(${image}); background-position: ${position}`} class="bg-cover bg-no-repeat h-60 p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden">    <div class="text-center">
+        
+        <!-- <h2 class="text-lg opacity-100 md:text-xl font-semibold text-heading-2">
+            {title}
+        </h2>
+        <Paragraph>
+            {description}
+        </Paragraph> -->
+       
+        
+    </div>
+    <span class="absolute w-32 aspect-square -bottom-16 -right-16 bg-primary/10 rounded-full"></span>
+</div>
+</a>

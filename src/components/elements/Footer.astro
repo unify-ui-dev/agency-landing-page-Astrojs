@@ -3,65 +3,68 @@ import GroupFooterNav from "../blocks/GroupFooterNav.astro";
 import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
-const footerNav1 = [
-    {
-        itemText:"Marketing",
-        itemLink:"#"
-    },
-    {
-        itemText:"Analylitics",
-        itemLink:"#"
-    },
-    {
-        itemText:"Commerce",
-        itemLink:"#"
-    },
-    {
-        itemText:"Insights",
-        itemLink:"#"
-    }
-]
+import BtnLink from "../shared/BtnLink.astro";
+import Button from "../shared/Button.astro";
+// const footerNav1 = [
+//     {
+//         itemText:"Marketing",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Analylitics",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Commerce",
+//         itemLink:"#"
+//     },
+//     {
+//         itemText:"Insights",
+//         itemLink:"#"
+//     }
+// ]
 
 const footerSupport = [
     {
         itemText:"Pricing",
-        itemLink:"#"
+        itemLink:"#cta"
     },
-    {
-        itemText:"Guides",
-        itemLink:"#"
-    },
+    // {
+    //     itemText:"Guides",
+    //     itemLink:"#"
+    // },
     {
         itemText:"FAQ",
-        itemLink:"#"
+        itemLink:"#cta"
     },
     {
         itemText:"Contact",
-        itemLink:"#"
+        itemLink:"#cta"
     }
 ]
 
 const footerCompany = [
     {
         itemText:"About",
-        itemLink:"/about"
+        itemLink:"#about-us"
     },
+    // {
+    //     itemText:"Blog",
+    //     itemLink:"#"
+    // },
     {
-        itemText:"Blog",
-        itemLink:"#"
-    },
-    {
-        itemText:"Jobs",
-        itemLink:"#"
-    },
-    {
-        itemText:"Parteners",
-        itemLink:"#"
-    },
-    {
-        itemText:"Jobs",
+        itemText:"Terms",
         itemLink:"#"
     }
+    // {
+    //     itemText:"Jobs",
+    //     itemLink:"#"
+    // },
+    // {
+    //     itemText:"Parteners",
+    //     itemLink:"#"
+    // },
+  
 ]
 const footerLegal = [
     {
@@ -79,7 +82,7 @@ const footerLegal = [
 ]
 ---
 <div class="mt-16"></div>
-<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
+<footer class="relative bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-20 rounded-t-3xl">
     <div class="absolute right-0 top-0 h-full w-full flex justify-end">
         <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
             <span
@@ -94,7 +97,7 @@ const footerLegal = [
           </div>
       </div>
 
-      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+      <div class="absolute left-0 bottom-36 h-full w-full flex items-end">
         <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
             <span
               class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
@@ -113,7 +116,15 @@ const footerLegal = [
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
             <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
                 <div class="h-full">
-                    <a href="#" class="relative flex items-center gap-3">
+                    
+                        
+                            <div class="inline-flex font-semibold text-2xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
+                                Hinterland Web
+                            </div>
+                            
+                        </a>
+                    
+                    <!-- <a href="#" class="relative flex items-center gap-3">
                         <div class="relative w-7 h-7 overflow-auto flex rounded-xl">
                             <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
                             <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
@@ -123,11 +134,19 @@ const footerLegal = [
                         <div class="inline-flex text-lg font-semibold text-heading-1">
                             AgenceX
                         </div>
-                    </a>
-                    <Paragraph className={"mt-8"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, maiores nam doloribus id magni
+                    </a> -->
+                    <Paragraph className={"mt-1"}>
+                        Made with ❤️ in Pomona. Send us an
                     </Paragraph>
-                </div>
+                    <Paragraph className={"mt-2"}>
+                        <a href="mailto:mail@andresilva.online?subject=Enquiry%20about%20your%20services">
+                        <Button variant="primary">
+                            <span class="text-white text-lg relative z-[5]">Email</span>
+                        </a>
+                    </Paragraph>
+
+                 
+               
 
                 <!-- social links -->
                 <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
@@ -160,28 +179,31 @@ const footerLegal = [
                     </a>
                 </div>
             </div>
+        </div>
 
             <GroupFooterNav>
+               
+                <FooterNav title={"Support"} navItems={footerSupport}/>
                 <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+            
             </GroupFooterNav>
 
             <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
-                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+               
+                
+                
             </GroupFooterNav>
 
         </div>
+    
     </Container>
     <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
         <Container>
-            <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
+            <div class="flex justify-between content-center items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> AgenceX. All right reserved
+                    &copy; <span id="year"></span> 2024 Hinterland Web. All right reserved
                 </div>
-                <div>
-                    Proudly made by <a href="https://github.com/johnkat-mj" target="_blank" class="font-semibold">John Kat</a>
-                </div>
+                
             </div>
         </Container>
     </div>
