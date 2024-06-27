@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/sections/container.astro";
 
@@ -17,13 +16,13 @@ export async function getStaticPaths() {
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
 
-if ('render' in entry) {
   const { Content } = await entry.render();
+ 
   // Use Content here
-}
+
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} value="">
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
@@ -46,7 +45,7 @@ if ('render' in entry) {
         <span class="text-gray-400 hidden md:block">•</span>
         <div class="w-full md:w-auto flex flex-wrap gap-3">
           {
-            entry.data.tags.map((tag:any) => (
+            entry.data.tags.map((tag) => (
               <span class="text-sm text-gray-500">#{tag}</span>
             ))
           }
@@ -55,14 +54,14 @@ if ('render' in entry) {
     </div>
 
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
-      
+      <Content />
     </div>
+    
     <div class="text-center mt-8">
       <a
         href="/blog"
         class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-        >← Back to Blog</a
-      >
+        >← Back to Blog</a>
     </div>
   </Container>
 </Layout>
