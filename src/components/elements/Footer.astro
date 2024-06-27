@@ -80,9 +80,13 @@ const footerLegal = [
         itemLink:"#"
     }
 ]
+
+const paragraphProps={
+    smallerFont:"text-sm"
+}
 ---
 <div class="mt-16"></div>
-<footer class="absolute bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-10 rounded-t-3xl">
+<footer class="absolute w-full bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-10 rounded-t-3xl">
     <!-- <div class="absolute right-0 top-0 h-full w-full flex justify-end">
         <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
             <span
@@ -144,9 +148,9 @@ const footerLegal = [
                             <span class="text-white text-lg relative z-[5]">Email</span>
                         </a>
                     </Paragraph>
-                    <p class="mt-2 text-xs">
+                    <Paragraph className={"mt-2"} isSmallText={true}>
                        We acknowledge the Kabi Kabi people, the Traditional Custodians of the land upon which we stand. We pay our respects to their Elders, past and present.
-                    </p>
+                    </Paragraph>
                  
                
 
@@ -201,10 +205,10 @@ const footerLegal = [
     </Container>
     <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
         <Container>
-            <div class="flex justify-between content-center items-center gap-6 md:text-lg text-heading-3">
+            <div class="flex justify-center content-center items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> 2024 Hinterland Web. All rights reserved.
-                </div>
+                     <span id="year"></span> &copy; 2024 Hinterland Web. All rights reserved.
+                    </div>
                 
             </div>
         </Container>

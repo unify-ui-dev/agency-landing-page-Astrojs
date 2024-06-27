@@ -1,11 +1,12 @@
 ---
 export interface Props{
     className?:string
+    isSmallText?:boolean
 }
 
-const {className} = Astro.props
+const {className, isSmallText} = Astro.props
 ---
 
-<p class={`md:text-lg text-heading-3 ${className}`}>
+<p class={` ${isSmallText ? "text-sm" : "md:text-lg"} text-heading-3 ${className} `}>
     <slot/>
 </p>
