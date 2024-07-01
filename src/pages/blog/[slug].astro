@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/sections/container.astro";
+import {remark} from "remark";
+import html from "remark-html";
 
 
 
@@ -10,16 +12,19 @@ export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry },
+    props: { entry  },
   }));
 }
 
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
 
-  const { Content } = await entry.render();
+  
  
   // Use Content here
+  const { Content } = await entry.render();
+ 
+
 
 ---
 
@@ -53,11 +58,13 @@ const { entry } = Astro.props;
         </div>
       </div>
     </div>
-
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+
       <Content />
+      
+
     </div>
-    
+
     <div class="text-center mt-8">
       <a
         href="/blog"
