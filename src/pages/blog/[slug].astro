@@ -2,8 +2,9 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/sections/container.astro";
-import {remark} from "remark";
-import html from "remark-html";
+
+import Title from "~/components/shared/Title.astro";
+import Paragraph from "~/components/shared/Paragraph.astro";
 
 
 
@@ -34,10 +35,10 @@ const { entry } = Astro.props;
       <span class="text-primary uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
-      <h1
+      <Title
         class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
         {entry.data.title}
-      </h1>
+      </Title>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
         <span class="text-gray-400">
           {entry.data.author}
@@ -58,10 +59,10 @@ const { entry } = Astro.props;
         </div>
       </div>
     </div>
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div class="mx-auto prose prose-h2:text-heading-2 prose-li:marker:text-secondary dark:prose-li:marker:text-tertiary prose-lg mt-6 max-w-3xl dark:text-tertiary">
 
       <Content />
-      
+
 
     </div>
 

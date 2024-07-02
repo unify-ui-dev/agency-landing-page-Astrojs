@@ -3,6 +3,9 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/sections/container.astro";
 import Sectionhead from "../components/sections/sectionhead.astro";
+import Title from "~/components/shared/Title.astro";
+import Paragraph from "~/components/shared/Paragraph.astro";
+import Subtitle from "~/components/shared/Subtitle.astro";
 
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
@@ -18,10 +21,10 @@ publishedBlogEntries.sort(function (a, b) {
 <Layout title="Blog" value="blog">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
-      <Fragment slot="desc">
+      <Title slot="title">Our Blog</Title>
+      <Paragraph slot="desc">
         We write about building startups and thoughts going on our mind.
-      </Fragment>
+      </Paragraph>
     </Sectionhead>
     <main class="mt-16">
       <ul class="grid gap-16 max-w-4xl mx-auto">
@@ -41,21 +44,21 @@ publishedBlogEntries.sort(function (a, b) {
                     class="w-full rounded-md object-cover object-center bg-white"
                   />
                   <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                    <span class="text-primary uppercase tracking-wider text-sm font-medium">
                       {blogPostEntry.data.category}
                     </span>
 
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                    <Subtitle class="leading-snug tracking-tight mt-1 ">
                       {blogPostEntry.data.title}
-                    </h2>
+                    </Subtitle>
 
                     <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
+                      <span class="text-gray-500">
                         {blogPostEntry.data.author}
                       </span>
-                      <span class="text-gray-400">• </span>
+                      <span class="text-gray-500">• </span>
                       <time
-                        class="text-gray-400"
+                        class="text-gray-500"
                         datetime={blogPostEntry.data.publishDate.toISOString()}>
                         {blogPostEntry.data.publishDate.toDateString()}
                       </time>

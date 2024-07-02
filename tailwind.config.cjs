@@ -11,6 +11,7 @@ module.exports = {
 				"box-border": "rgb(var(--box-border))",
 				primary: "#42b3e8",
 				secondary:"#143144",
+				tertiary:"#d8e5cf",
 				// hover: "#42b3e8",
 				"heading-1": "rgb(var(--heading-1))",
 				"heading-2": "rgb(var(--heading-2))",
@@ -23,5 +24,5 @@ module.exports = {
 			
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")]
 }

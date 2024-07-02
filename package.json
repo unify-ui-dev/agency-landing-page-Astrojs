@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
+    "@tailwindcss/typography": "^0.5.13",
     "astro": "^3.0.7",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.4",
